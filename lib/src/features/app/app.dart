@@ -9,7 +9,10 @@ class GreenlightApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Greenlight',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'UbuntuMono'),
+      theme: ThemeData(
+        fontFamily: 'UbuntuMono',
+        colorScheme: ColorScheme.fromSeed(seedColor: Palette.hunterGreen),
+      ),
       routeInformationParser: AppRoutes.router.routeInformationParser,
       routeInformationProvider: AppRoutes.router.routeInformationProvider,
       routerDelegate: AppRoutes.router.routerDelegate,

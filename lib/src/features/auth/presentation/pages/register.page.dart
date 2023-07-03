@@ -15,7 +15,19 @@ class RegisterPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Register here'),
+            const Text(
+              "Get started! 😁",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            const GreenlightTextInputField(
+              labelText: "Name",
+            ),
+            const GreenlightTextInputField(
+              labelText: "Email",
+            ),
+            const GreenlightTextInputField(
+              labelText: "Password",
+            ),
             const SizedBox(
               height: 32,
             ),
@@ -24,7 +36,7 @@ class RegisterPage extends StatelessWidget {
                 GoRouter.of(Utils.rootNavKey.currentContext!)
                     .go(MoviesPage.route);
               },
-              child: const Text('Explore'),
+              child: const Text('Create an account'),
             ),
           ],
         ),

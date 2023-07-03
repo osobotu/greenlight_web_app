@@ -20,12 +20,16 @@ class AppRoutes {
       GoRoute(
         parentNavigatorKey: Utils.rootNavKey,
         path: RegisterPage.route,
-        builder: (context, state) => const RegisterPage(),
+        pageBuilder: (context, state) => const NoTransitionPage(
+          child: RegisterPage(),
+        ),
       ),
       GoRoute(
         parentNavigatorKey: Utils.rootNavKey,
         path: LoginPage.route,
-        builder: (context, state) => const LoginPage(),
+        pageBuilder: (context, state) => const NoTransitionPage(
+          child: LoginPage(),
+        ),
       ),
       ShellRoute(
         parentNavigatorKey: Utils.rootNavKey,

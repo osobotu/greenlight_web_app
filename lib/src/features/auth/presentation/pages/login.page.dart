@@ -15,7 +15,16 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Login here'),
+            const Text(
+              'Welcome back! 😁',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            const GreenlightTextInputField(
+              labelText: "Email",
+            ),
+            const GreenlightTextInputField(
+              labelText: "Password",
+            ),
             const SizedBox(
               height: 32,
             ),
@@ -24,7 +33,7 @@ class LoginPage extends StatelessWidget {
                 GoRouter.of(Utils.rootNavKey.currentContext!)
                     .go(MoviesPage.route);
               },
-              child: const Text('Explore'),
+              child: const Text('Login'),
             ),
           ],
         ),
