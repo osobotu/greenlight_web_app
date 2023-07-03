@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greenlight_web/src/core/core.dart';
+import 'package:greenlight_web/src/features/navigation/navigation.dart';
 
 class HomePage extends StatelessWidget {
   static const String route = '/home';
@@ -14,7 +15,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: Utils.homeScaffoldKey,
-      body: child,
+      body: Row(
+        children: [
+          const LeftNavigationView(),
+          const VerticalDivider(
+            thickness: 1,
+            width: 0,
+            color: Palette.black,
+          ),
+          Expanded(child: child),
+        ],
+      ),
     );
   }
 }

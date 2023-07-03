@@ -21,7 +21,8 @@ class RegisterPage extends StatelessWidget {
             ),
             OutlinedButton(
               onPressed: () {
-                Utils.rootNavKey.currentContext!.go(MoviesPage.route);
+                GoRouter.of(Utils.rootNavKey.currentContext!)
+                    .go(MoviesPage.route);
               },
               child: const Text('Explore'),
             ),

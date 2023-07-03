@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Utils {
-  static GlobalKey<NavigatorState> rootNavKey = GlobalKey();
-  static GlobalKey<NavigatorState> tabNavKey = GlobalKey();
-  static GlobalKey<NavigatorState> homeScaffoldKey = GlobalKey();
+  static final GlobalKey<NavigatorState> rootNavKey = GlobalKey();
+  static final GlobalKey<NavigatorState> tabNavKey = GlobalKey();
+  static final GlobalKey<ScaffoldState> homeScaffoldKey = GlobalKey();
 }
