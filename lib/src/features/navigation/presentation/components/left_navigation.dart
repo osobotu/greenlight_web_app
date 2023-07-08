@@ -13,25 +13,27 @@ class LeftNavigationView extends ConsumerWidget {
 
     return SizedBox(
       width: 256,
-      child: Column(children: [
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Text(
-            "Greenlight",
-            style: TextStyle(
-              fontSize: 20,
+      child: Column(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              "Greenlight",
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
           ),
-        ),
-        ...List.generate(
-          navItems.length,
-          (index) {
-            return LeftNavigationItemTile(
-              item: navItems[index],
-            );
-          },
-        ),
-      ]),
+          ...List.generate(
+            navItems.length,
+            (index) {
+              return LeftNavigationItemTile(
+                item: navItems[index],
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }

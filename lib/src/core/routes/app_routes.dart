@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:greenlight_web/src/core/core.dart';
 import 'package:greenlight_web/src/features/auth/auth.dart';
+import 'package:greenlight_web/src/features/auth/presentation/pages/activation.page.dart';
 import 'package:greenlight_web/src/features/contact_us/contact_us.dart';
 import 'package:greenlight_web/src/features/docs/docs.dart';
 import 'package:greenlight_web/src/features/home/home.dart';
@@ -29,6 +30,13 @@ class AppRoutes {
         path: LoginPage.route,
         pageBuilder: (context, state) => const NoTransitionPage(
           child: LoginPage(),
+        ),
+      ),
+      GoRoute(
+        parentNavigatorKey: Utils.rootNavKey,
+        path: ActivationPage.route,
+        pageBuilder: (context, state) => const NoTransitionPage(
+          child: ActivationPage(),
         ),
       ),
       ShellRoute(
